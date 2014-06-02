@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Get changed files
+FILES=$(git diff HEAD^ HEAD --name-only --diff-filter=ACM | grep -e '\.py$')
+ 
+ # Go over each file and autopep8 it.
+for f in $FILES
+do
+    # Auto pep8 correction
+    autopep8 --in-place --ignore=E309,E501,W293 $f
+done
+
+# Afterwards we can do a 'git diff' in order to see 
+# what correction were made.
