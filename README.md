@@ -10,3 +10,4 @@ Dotfiles
   * defaults write com.apple.finder AppleShowAllFiles YES
   * killall Finder
 * [Docker](https://www.docker.com/products/overview)
+* [Insomnia](https://insomnia.rest/)
